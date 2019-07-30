@@ -1,5 +1,8 @@
 #include<iostream>
 
+// https://codeday.me/jp/qa/20190125/183634.html
+// https://marycore.jp/prog/c-lang/compound-literal/
+
 using namespace std;
 
 int main(){
@@ -11,17 +14,17 @@ int main(){
 
 	printf("%f ( %08X )\n", f, i);
 
-	/* ƒrƒbƒg‚Ì—ñ‚ð•\Ž¦‚µ‚Ü‚· */
+	/* ï¿½rï¿½bï¿½gï¿½Ì—ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ */
 	for (j = 31; j >= 0; j--){
 		printf("%d", (i >> j) & 1);
 		if (!(j % 8)){ cout << " "; }
 	}
 	printf("\n");
 
-	/* Žw”•”i 1ƒrƒbƒg jAŽw”•”i 8ƒrƒbƒg jA‰¼”•”i 23ƒrƒbƒg j‚ðŽæ‚èo‚µ‚Ü‚· */
-	printf("•„†•” : %X\n", (i >> 31) & 1);
-	printf("Žw”•” : %X\n", (i >> 23) & 0xFF);
-	printf("‰¼”•” : %X\n", i & 0x7FFFFF);
+	/* ï¿½wï¿½ï¿½ï¿½ï¿½ï¿½i 1ï¿½rï¿½bï¿½g ï¿½jï¿½Aï¿½wï¿½ï¿½ï¿½ï¿½ï¿½i 8ï¿½rï¿½bï¿½g ï¿½jï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½i 23ï¿½rï¿½bï¿½g ï¿½jï¿½ï¿½ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½Ü‚ï¿½ */
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : %X\n", (i >> 31) & 1);
+	printf("ï¿½wï¿½ï¿½ï¿½ï¿½ : %X\n", (i >> 23) & 0xFF);
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : %X\n", i & 0x7FFFFF);
 	getchar();
 
 	int ar[] = { 1, 5, 8, 1 };
